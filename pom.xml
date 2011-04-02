@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+	    <artifactId>easyb-maven-parent</artifactId>
+	    <groupId>org.easyb</groupId>
+	    <version>1.3</version>
+	</parent>
+	
+	<artifactId>easyb</artifactId>
+	<version>0.99-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	
+	<name>Easyb composite</name>
+	
+	<description>
+		This composite contains a restricted version of easyb-core, so that people can depend on named releases of easyb without having to keep a version range of easyb-core
+		if they so wish. It provides compatibility with existing uses of easyb, and easyb versioning (0.9x). It is *recommended* that people stop using this artefact and instead use the easyb-core with a version range of [1,2] so updated bug fixes and feature releases flow in.
+	</description>
+	<scm>
+		<!-- this is the format documented in the 1.4 SCM plugin -->
+		<connection>scm:git:git@github.com:easyb/easyb</connection>
+		<developerConnection>scm:git:git@github.com:easyb/easyb</developerConnection>
+		<url>http://github.com/easyb/easyb-core</url>
+	</scm>	
+	<dependencies>
+	    <dependency>
+	      <groupId>org.easyb</groupId>
+	      <artifactId>easyb-core</artifactId>
+	      <version>[1.1]</version>
+	    </dependency>
+	 </dependencies>
+</project>
